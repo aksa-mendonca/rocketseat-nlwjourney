@@ -44,3 +44,5 @@ const section = document.querySelector('section')
 for(let atividade of atividades) {
     section.innerHTML += criarItemDeAtividade(atividade)
 }
+
+console.log('Aula 01 da NLW Journey')
