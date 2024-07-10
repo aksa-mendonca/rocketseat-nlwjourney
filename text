@@ -1,0 +1,28 @@
+HTML
+- Markup
+  - tags, elementos
+-Language
+
+CSS
+- Cascadin Style Sheet
+
+JavaScript
+- interpretada pelo browser
+- dinâmica
+- orientada a objetos
+- ECMAScript traxendo inovações
+
+Conceitos fundamentais de programação
+
+- Comentários
+- Declaração de variáveis (const, let, var)
+- Operadores (atribuição, concatenação, matemáticos)
+- Tipos de Dados (string, number, boolena, Date)
+- Estrutura de dados (functions, object, array)
+- Controle de fluxo (if/else)
+- Estrutura de repetição (for)
+- Manipulação e gestão de dados
+  - Converção de dados
+
+Algoritmo
+- Sequência de passos lógica e finita para resolução de um problema

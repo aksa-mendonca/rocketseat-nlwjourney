@@ -1,3 +1,14 @@
+//bibliotecas e códigos de terceiros
+const formatador = (data) => {
+    // console.log(dayjs(data).format('hh:mm'))
+
+    return {
+        dia:dayjs(data).format('dddd')
+    }
+}
+
+// formatador(new Date('2024-02-15'))
+
 //object {}
 const atividade = {
     nome: "Almoço",
@@ -6,7 +17,7 @@ const atividade = {
 }
 
 //list, array, vetor[a, b, c]
-const atividades = [
+let atividades = [
     atividade,
     {
         nome: 'Academia em grupo',
@@ -20,6 +31,8 @@ const atividades = [
     }
 ]
 
+// atividades = []
+
 //arrow function
 const criarItemDeAtividade = (atividade) => {
     let input = '<input type="checkbox" '
@@ -30,19 +43,30 @@ const criarItemDeAtividade = (atividade) => {
 
     input += '>' 
 
+    const formatar = formatador(atividade.data);
+
 return `
 <div>
     ${input}
     <span>${atividade.nome}</span>
-    <time>${atividade.data}</time>
+    <time>${formatar.dia}</time>
 </div>
 `
 }
 
-const section = document.querySelector('section')
+const atualizarListaDeAtividades = () => {
+    const section = document.querySelector('section')
 
-for(let atividade of atividades) {
-    section.innerHTML += criarItemDeAtividade(atividade)
+    //verificar se a lista está vazia
+    if(atividades.length == 0) {
+        section.innerHTML = `<p>Nenhuma atividade cadastrada.</p>`
+        return
+    }
+
+    for(let atividade of atividades) {
+        section.innerHTML += criarItemDeAtividade(atividade)
+    }
+
 }
 
-console.log('Aula 01 da NLW Journey')
+atualizarListaDeAtividades()
