@@ -3,7 +3,12 @@ const formatador = (data) => {
     // console.log(dayjs(data).format('hh:mm'))
 
     return {
-        dia:dayjs(data).format('dddd')
+        dia: {
+            numerico: dayjs(data).format('DD'),
+            semana: {
+                curto: dayjs
+            }
+        }
     }
 }
 
@@ -45,11 +50,12 @@ const criarItemDeAtividade = (atividade) => {
 
     const formatar = formatador(atividade.data);
 
+
 return `
 <div>
     ${input}
     <span>${atividade.nome}</span>
-    <time>${formatar.dia}</time>
+    <time>${formatar.dia}, dia XX </time>
 </div>
 `
 }
